@@ -42,12 +42,12 @@ module.exports = function (grunt) {
 			options: {
 				banner: '/*! <%= pkg.name %> ' +
 					'<%= grunt.template.today("dd-mm-yyyy") %> */\n',
-				compress: true,
+				compress: {},
 				mangle: true,
 				sourceMap: true
 			},
 			target: {
-				src: ['<%= dirs.src.src %>/main.js'],
+				src: ['<%= dirs.src.src %>/**/*.js'],
 				dest: '<%= dirs.dest.js %>/main.min.js'
 			}
 		},
